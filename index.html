@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seaharvest</title>
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		@font-face{
+		font-family: 'PressuraBold';
+		src: url('fonts/pressura_mono_bold.otf');
+		}
+		@font-face{
+		font-family: 'Pressura';
+		src: url('fonts/pressura_mono.otf');
+		}
+		@font-face{
+		font-family: 'Portrait';
+		src: url('fonts/Portrait-Bold.otf');
+		}
+		body{
+			background: #fffcf9;
+			font-size: 10px;
+			overflow-x: hidden;
+			font-family: 'Pressura';
+		}
+
+		img{
+			width: 100%;
+		}
+		.caixa{
+			position:absolute;
+			overflow: hidden;
+			bottom: 23px;
+			right: 23px;
+			left: 23px;
+			top: 23px;
+		}
+		
+		.container{
+			width: 1024px;
+			margin:auto;
+		}
+	
+		a{
+			text-decoration: none;
+			color: inherit;
+		}
+
+		ul li{
+			font-size:12px;
+			list-style-type: none;
+			display: inline-block;
+			border-width: 2px;
+			border-color: black;
+			border-style: solid;
+			text-align: center;
+			padding:13px;
+			margin-left: -8px;
+			margin-bottom:2px;
+			position:relative;
+			left: 28px;
+			top: 24px;
+			right: 24px;
+			bottom: 24px;
+			text-transform: uppercase;
+		}
+		header{
+			font-family: 'PressuraBold';
+		}
+		#s1{
+			width: 162px;
+			height: 148px;
+			text-align: center;
+			margin-right: -3px;	
+		}
+		#s1 img{
+    		padding: 15px;
+    		padding-top:30px;
+		}
+		#s2{
+			width: 654px;
+			height: 148px;
+			text-align: center;
+			line-height: 34px;
+			text-transform: uppercase;
+		}
+		#s2 h1{
+			font-size: 10px;
+			font-family: 'Pressura';
+		}
+		#s2 h2{
+			font-size: 48px;
+			font-family: 'PressuraBold';
+		}
+		#s2 h3{
+			font-size: 17px;
+			font-family: 'PressuraBold'
+		}
+		#s3{
+			width: 160px;
+			height: 148px;
+			text-align: center;
+			margin-left: -3px;		
+		}
+		#s3 hgroup{
+			align-items: center;
+		}
+		#s3 h2{
+			padding-top: 10px;
+		}
+		#s4, #s5, #s6, #s7{
+			width: 245px;
+			height: 43px;
+			margin-top: -1px;
+		}
+		#s8{
+			width: 651px;
+			height: 556px;
+			margin-right: -3px;
+			margin-bottom:-1px;
+		}
+		#s8 h1{
+			font-size: 70px;
+		}
+		#s8 h2{
+			padding-bottom: 290px;
+		}
+		#s8 img{
+			padding-top: 170px;
+		}
+		#s8 h4{
+			padding-left: 475px;
+		}
+		#s9{
+			width: 323px;
+			height: 556px;
+			margin-bottom:-1px;
+		}
+		#s9 h1{
+			padding-top: 20px;
+		}
+		#s9 img{
+			padding-top:75px;
+			padding-left: 30px;
+			padding-right: 30px
+		}
+		#s9 h2{
+			padding-top: 230px;
+		}
+		#s9 h2, #s9 h4{
+			font-size: 14px;
+			text-transform: uppercase;
+			font-family: 'PressuraBold'
+		}
+		#s9 h3, #s9 h5{
+			font-size: 12px;
+			text-transform: uppercase;
+			padding-right: 15px;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			line-height: 25px;
+		}
+		#s9 .caixa,#s10 .caixa{
+			border-width:2px; 
+   			border-style:dashed;
+   			text-align: center;
+		}
+		#s10{
+			width: 244px;
+			height: 416px;
+			margin-right: -3px;
+			margin-bottom:-1px;
+		}
+		#s10 h1{
+			padding-top: 150px;
+			padding-bottom: 10px
+		}
+		#s10 h2, #s10 h4{
+			font-size: 14px;
+			text-transform: uppercase;
+			font-family: 'PressuraBold'
+		}
+		#s10 h3, #s10 h5{
+			font-size: 12px;
+			text-transform: uppercase;
+			padding-right: 15px;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			line-height: 20px;
+		}
+		#s10 img{
+			padding:20px;
+		}
+		#s11{
+			width: 730px;
+			height: 416px;
+			margin-bottom:-1px;
+		}
+		#s11 h1{
+			font-size: 70px;
+		}
+		#s11 img{
+			width: 200px;
+			padding-top: 30px;
+			margin-left: 460px;
+		}
+		#theblue{
+			column-count: 2;
+			padding-right: 270px;
+			padding-top: 10px;
+		}
+		#s12{
+			width: 327px;
+			height: 606px;
+			float: left;
+			margin-right: 2px;
+		}	
+		#s12 h2{
+			padding-top: 10px;
+		}
+		#s12 h3{
+			padding-top: 220px;
+		} 
+		#s12 h4{
+			padding-left: 160px;
+			padding-top: 10px;
+		}
+		#s12 img{
+			padding-top: 150px;
+		}	
+		#s13{
+			width: 327px;
+			height: 684px;
+		}
+		#s13 h2{
+			padding-top: 15px;
+		}
+		#s13 h3{
+			padding-top: 320px;
+		}
+		#s13 h4{
+			padding-left: 160px;
+			padding-top: 20px;
+		}
+		#s13 img{
+			padding-top: 200px;
+		}
+		#s14{
+			width: 322px;
+			height: 606px;
+			float: right;
+			margin-right:56px;
+		}
+		#s14 h1{
+			text-align: center;
+		}
+		#s14 h2{
+			padding-top: 10px;
+			text-align: center;
+		}
+		#s14 h3{
+			padding-top: 250px;
+		}
+		#s14 img{
+			padding-top: 120px;
+		}
+		#s15{
+			float: left;
+			width: 327px;
+			height: 80px;
+			margin-top: -79px;
+		}
+		#s16{
+			width: 322px;
+			height: 80px;
+			float: right;
+			margin-right: 56px;
+			margin-top: -79px; 
+			
+		}
+		#s16 p{
+			font-size: 28px;
+			font-family: 'PressuraBold';
+			text-align: center;
+		}
+		#s17{
+			width: 408px;
+			height: 34px;
+			padding-top: 8px;
+			margin-top: -1px;
+			margin-right: -3px;
+		}
+		#s18{
+			width:327px;
+			height: 34px;
+			padding-top: 8px;
+		}
+		#s19{
+			width: 241px;
+			height: 34px;
+			padding-top: 8px;
+		}
+		section{
+			display: inline-block;
+			position:relative;
+			border-width:2px;
+			border-color: black;
+			border-style: solid;
+			left: 24px;
+			top: 24px;
+			right: 24px;
+			bottom: 24px;
+			margin:-4px;
+		}
+		hgroup{
+			width: 99%;
+			position: absolute;
+			z-index: 5;
+			padding-top:5px;
+		}
+		main h1{
+			font-size: 40px;
+			font-weight: bold;
+			font-family: 'Portrait';
+			line-height: 85%;
+			text-transform: uppercase;
+		}
+		main h2{
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+		footer hgroup{
+			font-size: 7px;
+			text-align: center;
+		}
+		footer{
+			margin-bottom:24px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<!-- fila1-->
+		<div class="container">
+			<section id="s1" class="col-2">
+				<div class="caixa">
+					<img src="images/img_03.jpg">
+				</div>
+			</section>
+
+			<section id="s2" class="col-8">
+				<div class="caixa">
+					<hgroup>
+						<h1>Sunday, December 16, 2018</h1>
+						<h2>SEA HARVEST</h2>
+						<h3>Fresh seafood market<h3>
+					</hgroup>
+				</div>
+			</section>
+
+			<section id="s3" class="col-2">
+				<div class="caixa">
+					<hgroup>
+						<h1>BELCONNEN MARKETS</h1>
+						<h2>FYSHWICK MARKETS<h2>
+					</hgroup>	
+				</div>
+			</section>
+
+		
+		<!-- fila2-->
+		<nav>
+			<ul>
+				<li id="s4" class="col-3"><a href="#">About</a></li>
+				<li id="s5" class="col-8"><a href="#">Products</a></li>
+				<li id="s6" class="col-4"><a href="#">Contact</a></li>
+				<li id="s7" class="col-3"><a href="#">Order</a></li>
+			</ul>
+		</nav>
+		</div>		
+	</header>
+
+	<main>
+		<div class="container">
+		<!-- fila3-->
+			<section id="s8" class="col-9">
+				<div class="caixa">
+					<hgroup>
+						<h1>CATCH OF THE DAY</h1>
+						<h2>From sea to plate</h2>
+						<h3>The latest harvest has yielded deliciously fresh seafood perfect for devouring on its own or as part of a scrumptious recipe. Here’s a seasonal favourite…</h3>
+						<h4>Full report on page 3</h4>
+					</hgroup>
+					<img src="images/img_10.jpg">
+				</div>
+			</section>
+
+			<section id="s9" class="col-4">
+				<div class="caixa">
+					<hgroup>
+					<h1>FIND US</h1>
+					<h2>Belconnen markets</h2>
+					<h3>10 lathlain st, belconnen
+					Act 2617, Australia
+					Open wed-sun 8:00AM-6:00pm</h3>
+					<h4>Fyshwick markets</h4>
+					<h5>12 Dalby st, Fyshwick act
+					2609, australia
+					Open the-sun 7:00AM-5:30PM</h5>
+					</hgroup>
+					<img src="images/img_07.jpg">
+				</div>
+			</section>
+		<!-- fila4-->
+			<section id="s10" class="col-4">
+				<div class="caixa">
+					<hgroup>
+					<h1>GET IN TOUCH</h1>
+					<h2>Call us</h2>
+					<h3>0436 455 551</h3>
+					<h4>Email us</h4>
+					<h5>Click here</h5>
+					</hgroup>
+					<img src="images/img_18.jpg">
+				</div>
+			</section>
+
+			<section id="s11" class="col-4">
+				<div class="caixa">
+					<hgroup>
+					<h1>STRAIGHT FROM THE SOURCE</h1>
+					<h2>Sea harvest fresh</h2>
+					<div id="theblue">
+					<p>The blue green waters off the south east coast of Australia glisten as the sun rises above the horizon. Up early and eager, local fishermen brave the choppy seas as they collect their daily yield. Dedicated to preservation, they work extra hard to follow environmentally sustainable fishing practices – including avoiding overfishing, staying clear of protected areas, releasing protected species, and using safe fishing gear. As they arrive back at the docks, the huge array of fresh seafood is put on ice and shipped directly to Sea Harvest’s door in Canberra. Oysters, prawns, mussels, calamari, lobster, snapper, and every seasonal fish available travels straight from sea to store, just for you.</p></div>
+					</hgroup>
+					<img src="images/img_15.png">
+				</div>
+			</section>
+
+		<!-- fila5-->	
+			<section id="s12" class="col-4">
+				<div class="caixa">
+					<hgroup>
+					<h1>THE SEAHARVEST STORY</h1>
+					<h2>A tale of fish and family</h2>
+					<h3>The Sea Harvest story begins in the 1800s on a small, picturesque fishing island called Lefkada in Greece. For generations since, our love of the sea and taste for seafood has endured, following us to Canberra where we settled in the 1970s. For over 40 years now, we have dedicated ourselves to bringing the finest and freshest Australian seafood to our nation’s capital.</h3>
+					<h4>Read more on page 8</h4>
+					</hgroup>
+					<img src="images/img_25.jpg">
+				</div>
+			</section>
+
+			<section id="s13" class="col-4">
+				<div class="caixa">
+					<hgroup>
+					<h1>BATERMANS<br> BAY<br> FINISH<br> TIPS</h1>
+					<h2>Score the best catch</h2>
+					<h3>Cars will soon be bumper-to-bumper on the Clyde and Brown mountains as Canberrans pour out of the capital to feel the sun on their backs and…</h3>
+					<h4>Continued on page 11</h4>
+					</hgroup>
+					<img src="images/img_28.jpg">
+				</div>
+			</section>
+
+			<section id="s14" class="col-5">
+				<div class="caixa">
+					<hgroup>
+					<h1>FRESH AS<br> IT GETS</h1>
+					<h2>A taste of the sea</h2>
+					<h3>Sea Harvest’s seafood is trusted by many of the best seafood restaurants in Canberra. We are obsessed with cleanliness and quality, and only buy from suppliers who are 100% committed to sustainable fishing practices and the long term protection of sea life. We buy fresh so that we can sell fresh, and pride ourselves on bringing the best of the coast to the capital.</h3>
+					</hgroup>
+					<img src="images/img_23.jpg">
+				</div>
+			</section>
+
+			<section id="s15" class="col-4">
+				<div class="caixa"></div>
+			</section>
+
+			<section id="s16" class="col-3">
+				<div class="caixa">
+					<p>SEA HARVEST</p>
+				</div>
+			</section>
+
+		
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<section id="s17" class="col-7">
+				<div >
+					<hgroup>
+						<h1>©2018 SEA HARVEST AUSTRALIA, FRESH SEAFOOD MARKET</h1>
+					</hgroup>
+				</div>
+			</section>
+
+			<section id="s18" class="col-7">
+				<div>
+					<hgroup>
+						<h1>Belconnen markets/ Fyshwick markets
+						</h1>
+					</hgroup>
+				</div>
+			</section>
+
+			<section id="s19" class="col-7">
+				<div>
+					<hgroup>
+						<h1>Website by ed.
+						</h1>
+					</hgroup>
+				</div>
+			</section>
+		</div>
+		</footer>
+
+</body>
+</html>
